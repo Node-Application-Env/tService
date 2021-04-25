@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import {Sequelize} from 'sequelize';
+import Sequelize from 'sequelize';
 import enVariables from '../config/config.js';
 
 const basename = path.basename(__filename);
@@ -10,9 +10,9 @@ const db = {};
 
 let sequelize;
 if (config.use_env_variable) {
-  sequelize = new Sequelize(process.env[config.use_env_variable], config).Sequelize;
+  sequelize = new Sequelize(process.env[config.use_env_variable], config);
 } else {
-  sequelize = new Sequelize(config.database, config.username, config.password, config).Sequelize;
+  sequelize = new Sequelize(config.database, config.username, config.password, config);
 }
 
 fs

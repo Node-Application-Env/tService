@@ -1,7 +1,7 @@
 'use strict';
 import { DataTypes } from "sequelize";
 export async function up(queryInterface, Sequelize) {
-  await queryInterface.createTable('vechicalMasters', {
+  await queryInterface.createTable('vehicalMasters', {
     id: {
       type: DataTypes.UUID,
       primaryKey: true,
@@ -48,5 +48,5 @@ export async function up(queryInterface, Sequelize) {
   });
 }
 export async function down(queryInterface, Sequelize) {
-  await queryInterface.dropTable('vechicalMasters');
+  await queryInterface.dropTable('vehicalMasters');
 }

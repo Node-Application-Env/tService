@@ -10,7 +10,6 @@ export async function up(queryInterface, Sequelize) {
     },
     driverId: {
       type: DataTypes.UUID,
-      allowNull: false,
       references: {
         model: 'driverMasters',
         key: 'id', // key in Target model that we're referencing

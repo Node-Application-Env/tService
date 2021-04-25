@@ -13,7 +13,7 @@ export default (sequelize, DataTypes) => {
   };
   addressMaster.init({
     driverId: {
-      type: DataTypes.UUID4,
+      type: DataTypes.UUID,
       allowNull: false,
       references: {
         model: "driverMasters",

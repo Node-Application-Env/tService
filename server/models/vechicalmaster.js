@@ -1,7 +1,7 @@
 import { Model } from 'sequelize';
 
 export default (sequelize, DataTypes) => {
-  class vechicalMaster extends Model {
+  class vehicalMaster extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
@@ -11,7 +11,7 @@ export default (sequelize, DataTypes) => {
       // define association here
     }
   };
-  vechicalMaster.init({
+  vehicalMaster.init({
     name: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -60,7 +60,7 @@ export default (sequelize, DataTypes) => {
     }
   }, {
     sequelize,
-    modelName: 'vechicalMaster',
+    modelName: 'vehicalMaster',
   });
-  return vechicalMaster;
+  return vehicalMaster;
 };

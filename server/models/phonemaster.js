@@ -12,8 +12,8 @@ export default (sequelize, DataTypes) => {
     }
   };
   phoneMaster.init({
-    driverID: {
-      type: DataTypes.UUID4,
+    driverId: {
+      type: DataTypes.UUID,
       allowNull: false,
       references: {
         model: "driverMasters",
