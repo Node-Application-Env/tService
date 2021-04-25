@@ -13,5 +13,6 @@ const router = Router();
 router.get("/", vehicalMasterController.fetchAll );
 router.get("/:id", vehicalMasterController.fetchById );
 router.delete("/:id", vehicalMasterController.removeById );
+router.post("/", vehicalMasterController.insert );
 
 export default router;

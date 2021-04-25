@@ -12,10 +12,10 @@ module.exports = {
      * }], {});
     */
    return await queryInterface.bulkInsert('phoneMasters',[
-     { driverId: "184d808e-3ace-4063-92bc-84143d29ed9f", phoneNumber: '+91 8866117741', isActive: true, createdAt: new Date(), updatedAt: new Date() },
-     { driverId: "184d808e-3ace-4063-92bc-84143d29ed9f", phoneNumber: '+91 9924184381', isActive: false, createdAt: new Date(), updatedAt: new Date() },
-     { driverId: "cb7f6f70-20f6-49f9-a2f4-4032272456ab", phoneNumber: '+91 7779097075', isActive: true, createdAt: new Date(), updatedAt: new Date() },
-     { driverId: "cb7f6f70-20f6-49f9-a2f4-4032272456ab", phoneNumber: '+91 9924184381', isActive: false, createdAt: new Date(), updatedAt: new Date() },
+     { driverId: "3d0efff4-b7c0-49b6-a154-4a4b21d0fb76", phoneNumber: '+91 8866117741', isActive: true, createdAt: new Date(), updatedAt: new Date() },
+     { driverId: "3d0efff4-b7c0-49b6-a154-4a4b21d0fb76", phoneNumber: '+91 9924184381', isActive: false, createdAt: new Date(), updatedAt: new Date() },
+     { driverId: "79be7fef-13ab-46dc-95d4-faba967f3fbe", phoneNumber: '+91 7779097075', isActive: true, createdAt: new Date(), updatedAt: new Date() },
+     { driverId: "79be7fef-13ab-46dc-95d4-faba967f3fbe", phoneNumber: '+91 9924184381', isActive: false, createdAt: new Date(), updatedAt: new Date() },
    ], {});
   },
 

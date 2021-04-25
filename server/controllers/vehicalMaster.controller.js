@@ -61,9 +61,37 @@ const removeById = async (req, res) => {
   }
 };
 
+const insert = async (req, res) => {
+  const { vehicalNumber, name , fixKM, fixCharge, DA, seatCapacity, fuelType, isActive } = req.body;
+
+  const newVehical = vehicalMaster.build({
+    vehicalNumber,
+    name,
+    fixKM,
+    fixCharge,
+    DA,
+    seatCapacity,
+    fuelType,
+    isActive
+  });
+
+  newVehical.validate()
+    .then((rows) => {
+      newVehical.save().then((rows) => {
+        res.status(201).send({ status: 201, response: newVehical });
+      });
+    }).catch((err) => {
+      const errObj = {};
+      err.errors.map( er => {
+        errObj[er.path] = er.message;
+      })
+      res.status(422).send({ status: 422, error: errObj, url: req.baseUrl });
+    });
+};
 
 export default {
   fetchAll,
   fetchById,
-  removeById
+  removeById,
+  insert
 };
