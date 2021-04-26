@@ -49,7 +49,7 @@ app.use((req, res, next) => {
 app.use((err, req, res, next) => {  
 //   console.log(err);
   if (err.status === 404)
-      res.status(404).json({ message: "Not found (Invalid endpoint" });
+      res.status(404).json({ message: "Not found (Invalid endpoint)" });
   else
       res.status(500).json({ message: "Something looks wrong :( !!!" });
 });

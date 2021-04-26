@@ -11,8 +11,8 @@ const defaultResponse = (req, res, next) => {
 
 const router = Router();
 router.get("/", driverMasterController.fetchAll );
-// router.get("/:id", driverMasterController.fetchById );
-// router.delete("/:id", driverMasterController.removeById );
-// router.post("/", driverMasterController.insert );
+router.get("/:id", driverMasterController.fetchById );
+router.delete("/:id", driverMasterController.removeById );
+router.post("/", driverMasterController.insert );
 
 export default router;
