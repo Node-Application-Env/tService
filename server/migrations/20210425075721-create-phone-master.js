@@ -21,6 +21,11 @@ export async function up(queryInterface, Sequelize) {
       type: Sequelize.STRING,
       allowNull: false
     },
+    isDefault: {
+      type: DataTypes.BOOLEAN,
+      allowNull: true,
+      defaultValue: false
+    },
     isActive: {
       type: Sequelize.BOOLEAN,
       allowNull: false,
