@@ -3,6 +3,7 @@ import authRouter from "./auth.routes";
 
 import vehicalMasterRoute from "./vehicalMaster.routes";
 import driverMasterRoute from "./driverMaster.routes";
+import phoneMasterRoute from "./phoneMaster.routes";
 
 const router = express.Router();
 
@@ -13,5 +14,6 @@ router.get('/', (req, res) => { res.status(200).send({ message: 'WELCOME T-SERVI
 // router.use('/user', userRouter);
 router.use('/vehical', vehicalMasterRoute);
 router.use('/driver', driverMasterRoute);
+router.use('/phone', phoneMasterRoute);
 
 module.exports = router;

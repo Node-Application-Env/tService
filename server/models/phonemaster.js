@@ -24,7 +24,7 @@ export default (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        isNull: { msg: "Please enter valid phone number" },
+        notNull: { msg: 'Phone number can not be blank or null' },
         validateIndianPhoneNumber(value) {
           /* 
            --------------------------------------------------------------------------------
