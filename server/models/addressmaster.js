@@ -8,9 +8,12 @@ export default (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+
+      // M:1 DRIVER-MASTER RELEATION
+      addressMaster.hasMany(models.driverMaster, { foreignKey: "id", as: "driverMasters", });
     }
   };
+
   addressMaster.init({
     driverId: {
       type: DataTypes.UUID,
